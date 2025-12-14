@@ -1,0 +1,94 @@
+block content
+  block mainContainer
+    mixin aside(title, text)
+      aside(class!=attributes.class)
+        .aside__container.container 
+          h2.aside__title!= title
+          button(class="btn-full aside__btn", aria-label=text)= text
+    .wrapper-aside 
+      +aside("Скидка 15% на&nbsp;первую&nbsp;покупку", 'Получить!')(class='aside')
+      +aside("1000+ аксессуаров для дома", 'Подробнее')(class='aside1')
+      +aside("Коллекция стильного и&nbsp;яркого текстиля", 'Подробнее')(class='aside2')
+    include ../partials/card.pug
+    include ../partials/webpack-assets.pug
+    section(id="special-offer", class="special-offer section")
+      .special-offer__container.container
+        h2.special-offer__title.section__title Специальные предложения
+        ul.special-offer__list.list-flex
+          each entry in productsDbSpecialOffers
+            li.special-offer__item
+              +card(entry.category, entry.name, entry.item.fullname, entry.item.price, entry.item.rating, entry.item.specialOffer, entry.item.discount, entry.item.mechanism).special-offer
+    section(id="hight-rating", class="hight-rating section")
+      .hight-rating__container.container
+        h2.hight-rating__title.section__title Высокий рейтинг
+        ul.hight-rating__list.list-flex
+          each entry in productsDbHeightRating
+              li.hight-rating__item
+                +card(entry.category, entry.name, entry.item.fullname, entry.item.price, entry.item.rating, entry.item.specialOffer, entry.item.discount, entry.item.mechanism).hight-rating
+        a(href="/catalog", class="hight-rating__more btn-full dynamic-link", aria-label="перейти на страницу каталога") Смотреть больше товаров
+    aside(id="new-collection", class="new-collection")
+      .new-collection__container.container
+        h2.new-collection__title Оксфорд 1950
+        p.new-collection__text Новая коллекция изысканных кресел 
+        a(href="#", class="new-collection__link btn-full" ) Ознакомиться
+    section(id="top-category", class="top-category section")
+      .top-category__container.container 
+        h2.top-category__title.section__title Топ категории
+        ul.top-category__list.list-flex 
+          mixin top-category-card(title, textList, ariaLabel, toHref, altName, changedAt1024 = true)
+            li(class=`top-category__item top-category-card ${attributes.class || ''}`)
+              h3.top-category-card__title= title
+              picture.top-category-card__picture
+                if changedAt1024 
+                  source(media="(max-width: 1240px)", srcset=`./assets/images/top-category/${toHref}__1024.png`)
+                img(src=`./assets/images/top-category/${toHref}.png`, alt=altName, class="top-category-card__img")
+              ul.top-category-card__list.list-flex
+                each text in textList
+                  li.top-category-card__item 
+                    span.top-category-card__text= text
+              a(href=`/catalog?${toHref}=true`, class="top-category-card__link dynamic-link", aria-label=ariaLabel) 
+                span(class='top-category-card__link-text') В каталог
+                  span(aria-hidden="true", class="top-category-card__arrow")
+          +top-category-card('Диваны', ['Прямые', 'Угловые', 'Модульные'], 'Перейти на страницу с диванами', 'sofas','Диван', false)
+          +top-category-card('Кресла', ['Мягкие', 'Кресла-кровати'], 'Перейти на страницу с креслами', 'armchairs','Кресла')
+          +top-category-card('Кровати', ['Односпальные', 'Двуспальные'], 'Перейти на страницу кроватей', 'beds','Кровать')
+          +top-category-card('Тумбы и комоды', ['Тумбы', 'Комоды'], 'Перейти на страницу с тумбами и комодами', 'nightstands&dressers','Тумбочка комод')
+          +top-category-card('Стулья', ['Деревянные', 'Металлокаркас'], 'Перейти на страницу со стульями', 'chairs','Стулья')
+    section(id="helpfull", class="helpfull section")
+      .helpfull__container.container
+        h2.helpfull__title.section__title Полезное
+        mixin helpfull-card(text, link)
+         li(class=`helpfull__item ${attributes.class || ''}`)
+           p.helpfull__text= text
+           a(href=link, class="helpfull__link dynamic-link") Читать
+        ul.helpfull__list.list-flex
+          +helpfull-card("И нет сомнений, что сделанные на базе интернет-аналитики выводы представляют собой не что иное?", "#").helpfull__item0
+          +helpfull-card("Как принято считать, некоторые особенности приносят несомненную пользу обществу?", "#").helpfull__item1
+          +helpfull-card("Ясность нашей позиции очевидна: укрепление и развитие внутренней структуры?", "#").helpfull__item2
+          +helpfull-card("Прежде всего, консультация с широким активом однозначно фиксирует необходимость распределения?", "#").helpfull__item3
+          +helpfull-card("Как принято считать, некоторые особенности приносят несомненную пользу обществу?", "#").helpfull__item4
+    section(id="feedback", class="feedback section")
+      .feedback__container.container
+        .feedback__wrapper
+          h2.feedback__title Мы всегда вам рады!
+          p.feedback__text 
+            | Безусловно, новая модель организационной деятельности в значительной степени обусловливает важность распределения внутренних резервов и ресурсов.
+            span.tooltip
+              button.tooltip__btn
+                svg.tooltip__svg
+                  use(xlink:href=`${svgPath}#question`)
+              span.tooltip__text Реплицированные с зарубежных источников, исследования формируют глобальную сеть.
+          form(class="feedback__form feedback-form")
+            label.feedback-form__label
+              input(type="text", placeholder="Как вас зовут?", name="name", class="feedback-form__input")
+            label.feedback-form__label
+              input(type="text", placeholder="Ваш телефон", name="phone", class="feedback-form__input")
+            label.feedback-form__label
+              input(type="email", placeholder="Ваш e-mail", name="email", class="feedback-form__input") 
+            label.feedback-form__label
+              button(type="submit", name="name", class="feedback-form__submit btn-full", aria-label="Отправить форму") Отправить
+            label.feedback-form__label
+              input(type="checkbox", name="agreement", class="feedback-form__checkbox")
+              span.feedback-form__checkbox-btn.checkbox-btn
+              span.feedback-form__checkbox-text Принимаю 
+                a(href="#", class="feedback-form__agreement dynamic-link") пользовательское соглашение

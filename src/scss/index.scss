@@ -1,0 +1,443 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+@use 'variables' as *;
+@use "sass:list";
+
+.wrapper-aside {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 35px;
+}
+
+.dots {
+  z-index: 2;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    list-style: none;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &__button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    background-color: currentColor;
+    color: rgba($black, .3);
+    transition: color .3s ease;
+    cursor: pointer;
+  }
+
+  &__button--active {
+    color: $black;
+  }
+}
+
+@each $aside, $i in $mainAsides {
+  .#{$aside} {
+    position: absolute;
+    min-width: 100%;
+    background-image: url(../assets/images/aside/asideBackground#{$i}.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform .35s ease-in-out, visibility .35s ease;
+
+    @if $i ==0 {
+      transform: translateX(0%);
+    }
+
+    @else if $i ==list.length($mainAsides) - 1 {
+      transform: translateX(-100%);
+    }
+
+    @else {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.aside {
+  position: relative;
+
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include containerSidesPadding;
+  }
+
+  &__title {
+    margin: 0 0 48px 0;
+    max-width: 587px;
+    color: $grey;
+    @include text(48px, bold, normal)
+  }
+
+  &__btn {
+    padding: 21px 37px;
+    min-width: 187px;
+    max-width: 230px;
+  }
+
+}
+
+.aside2 .aside__title {
+  color: $white;
+}
+
+.section {
+  padding: 35px 0;
+
+  &__title {
+    margin: 0 0 26px 0;
+    @include text(32px, normal, normal);
+    color: $black;
+  }
+}
+
+.special-offer {
+  &__list {
+    overflow: hidden;
+    flex-wrap: nowrap;
+    gap: 32px;
+  }
+
+  &__item {
+    min-width: calc((100% - 32px * 3) / 4);
+
+    &:nth-child(3n - 1) {
+      min-width: calc((100% - 32px) / 2);
+    }
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    min-height: 511px;
+  }
+
+
+}
+
+.hight-rating {
+  padding-bottom: 70px;
+
+  &__list {
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    max-width: calc((100% - (32px * 3)) / 4);
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    min-height: 420px;
+  }
+
+  &__img {
+    max-width: calc(100% + 30px);
+  }
+
+  &__more {
+    display: block;
+    margin: 0 auto;
+    padding: 22px 36px;
+    width: fit-content;
+  }
+}
+
+.new-collection {
+  margin-bottom: 35px;
+  padding: 150px 0;
+  background-image: url('../assets/images/new-collection__asideBackground.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__title {
+    margin: 0;
+    max-width: 508px;
+    font-family: 'Playfair display';
+    @include text(60px, bold, 120%);
+    color: $gold;
+  }
+
+  &__text {
+    margin: 0 0 50px 0;
+    max-width: 508px;
+    @include text(48px, normal, 120%);
+    color: $white;
+  }
+
+  &__link {
+    display: inline-flex;
+    padding: 22px 32px;
+  }
+
+}
+
+.top-category {
+  &__list {
+    gap: 32px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 58px 30px 30px 30px;
+    min-height: 511px;
+    border-radius: 10px;
+    background-color: $grey_light;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: calc((100% - 32px) / 2);
+    }
+
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      width: calc((100% - (32px * 2)) / 3);
+      min-height: 405px;
+    }
+  }
+}
+
+.top-category-card {
+  &__title {
+    margin: 0 0 30px 0;
+    @include text(24px, normal, normal);
+    color: $black;
+  }
+
+  &__picture {
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    position: absolute;
+    top: 30px;
+    gap: 2px 30px;
+  }
+
+  &__item {
+    @include text(14px, normal, 100%);
+    color: $grey;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__link {
+    width: fit-content;
+    @include text(16px, bold, 120%);
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__link-text {
+    position: relative;
+    color: $primary;
+  }
+
+  &__arrow {
+    @include goodArrowInCircle(2px, 2px);
+  }
+}
+
+.helpfull {
+
+  &__list {
+    overflow: hidden;
+    flex-wrap: nowrap;
+    gap: 32px;
+  }
+
+  &__item {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 456px 30px 30px 30px;
+    min-width: calc((100% - 32px) / 2);
+    min-height: 676px;
+    border-radius: 10px;
+    background-color: $grey_light;
+  }
+
+  &__text {
+    margin: 0 0 30px;
+    max-width: 567px;
+    @include text(24px, normal, normal);
+    color: $black;
+  }
+
+  &__link {
+    width: fit-content;
+    padding: 17px 33px;
+    border: solid 2px currentColor;
+    border-radius: 10px;
+    @include text(16px, bold, 100%);
+    color: $primary;
+  }
+
+  $items: (
+    'item0',
+    'item1',
+    'item2',
+    'item3',
+    'item4',
+  );
+
+@each $item in $items {
+  &__#{$item} {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      max-height: 426px;
+      background-image: url(../assets/images/helpfull/#{$item}.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+}
+
+.feedback {
+  padding-bottom: 70px;
+
+  &__wrapper {
+    position: relative;
+    width: calc((100% - 32px) / 2);
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      content: '';
+      width: 100%;
+      min-height: 383px;
+      background-image: url('../assets/images/feedback/item.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: translate(calc(100% + 32px), -50%);
+    }
+  }
+
+  &__title {
+    margin: 0 0 9px 0;
+    @include text(32px, normal, 100%);
+    color: $black;
+  }
+
+  &__text {
+    margin: 0 0 16px 0;
+    color: $grey_shade;
+    @include text(14px, normal, normal);
+  }
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  &__label {
+    position: relative;
+  }
+
+  &__label:last-child {
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  &__label:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__label:nth-last-child(2) {
+    margin-bottom: 12px;
+    width: fit-content;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 7px 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: $grey_light;
+    @include text(16px, normal, 40px);
+    color: $grey;
+  }
+
+  &__input::placeholder {
+    color: currentColor;
+  }
+
+  &__checkbox-text {
+    vertical-align: bottom;
+    @include text(14px, normal, normal);
+  }
+
+  &__submit {
+    padding: 19px 35px;
+  }
+
+  &__agreement {
+    text-decoration: underline;
+    color: $primary;
+  }
+
+  &__checkbox {
+    opacity: 0;
+    margin-right: 9px;
+  }
+
+  &__checkbox:checked+&__checkbox-btn {
+    background-color: $primary;
+    color: $primary;
+  }
+
+}

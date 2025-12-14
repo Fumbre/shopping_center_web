@@ -1,0 +1,25 @@
+mixin card(category, id, fullname, price, rating, specialOffer, discount, mechanism)
+  div(class= specialOffer && mechanism ? `card card-mechanism-${mechanism} ${attributes.class + '__card' || ''}` : `card ${attributes.class  + '__card' || ''}` )
+    if specialOffer
+      .card__discount.card-discount
+        span.card-discount__text= `- ${discount.toLocaleString('ru-RU')}`
+    else
+      .card__rating.rating
+        span.rating__text= `${rating.toLocaleString('ru-RU')}`
+        svg.rating__svg
+          use(xlink:href=`${svgPath}#star`)
+    picture.card__picture 
+      source(media="(max-width: 493px)" srcset=`/assets/images/${category}/${id}__768px.png`)
+      if specialOffer && mechanism
+        source(media="(max-width: 1240px)" srcset=`/assets/images/${category}/${id}.png`)
+        img(src=`/assets/images/${category}/${id}-special.png`, class=`card__img ${attributes.class + '__img' || ''}` alt=fullname)
+      else
+        img(src=`/assets/images/${category}/${id}.png`, class=`card__img ${attributes.class + '__img' || ''}` alt=fullname)
+    h3.card__title!= `${fullname.replaceAll('-', '&#x200D;-&#x200D;')}`
+    if specialOffer
+      p.card__price
+        span.card__price-after-discount=  `${(price - discount).toLocaleString('ru-RU')} руб`
+        span.card__price-before-discount= `${price.toLocaleString('ru-RU')} руб`
+    else  
+      p.card__price= `${(price - discount).toLocaleString('ru-RU')} руб`
+    a.card__link(aria-label="Перейти на страничку товара", href=`/catalog/${category}/${id}`, class="dynamic-link") Купить

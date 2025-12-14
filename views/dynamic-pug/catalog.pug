@@ -1,0 +1,56 @@
+block content
+  if historyLinks
+    include historyLinks.pug
+  block mainContainer
+    include ../partials/card.pug
+    include ../partials/webpack-assets.pug
+    section.catalog 
+      .catalog__container.container
+        .catalog__wrapper
+          h2.catalog__title Каталог
+          ul.catalog__list.list
+            each product in sortedProductsDb
+              li.catalog__item.catalog-item
+                +card(product.category, product.name, product.item.fullname, product.item.price, product.item.rating, product.item.specialOffer, product.item.discount, false).catalog-item
+          ul#catalogBtns.catalog__btn-list.list-flex
+        .catalog__filter.catalog-filter 
+          h3.catalog-filter__title Фильтр
+          mixin catalogFilterItem(title, options)
+            li.catalog-filter__item.catalog-filter-item
+              h4.catalog-filter-item__title= title
+              button(class="catalog-filter-item__btn" aria-label=`Открыть выпадающий список ${title}`)
+              ul.catalog-filter-item__list.list-flex
+                each option in options 
+                  li.catalog-filter-item__item
+                    label.catalog-filter-item__label
+                      input(type="checkbox", name=option).catalog-filter-item__input
+                      span.catalog-filter-item__checkbox-btn.checkbox-btn
+                      span.catalog-filter-item__text= option
+          form.catalog-filter__form
+            ul.catalog-filter__list.list-flex 
+              +catalogFilterItem('Категория', ['Диваны', 'Кресла', 'Пуфы', 'Кровати', 'Тумбы', 'Комоды', 'Стулья', 'Столы', 'Аксессуары'])
+              li.catalog-filter__item.catalog-filter-item
+                h4.catalog-filter-item__title Цена
+                button(class="catalog-filter-item__btn" aria-label=`Открыть выпадающий список цены`)
+                ul.catalog-filter-item__list.list-flex
+                  li.catalog-filter-item__range.catalog-filter-item-range
+                    label.catalog-filter-item__label
+                      span.catalog-filter-item-range__text от
+                      input(type="text", name="from").catalog-filter-item-range__input-text
+                    label.catalog-filter-item__label
+                      span.catalog-filter-item-range__text до
+                      input(type="text", name="to").catalog-filter-item-range__input-text
+                  li.catalog-filter-item__range.catalog-filter-item-range
+                    label.catalog-filter-item-range__label
+                      input(type="range", name="from").catalog-filter-item-range__input.catalog-filter-item-range__input-from
+                    label.catalog-filter-item-range__label
+                      input(type="range", name="to").catalog-filter-item-range__input.catalog-filter-item-range__input-to
+              +catalogFilterItem('Скидка', ['Более 5 000', 'Менее 5 000', 'Не важно'])
+              +catalogFilterItem('Цвет', ['Коричневый', 'Черный', 'Бежевый', 'Серый', 'Белый', 'Синий', 'Оранжевый', 'Желтый', 'Зеленый'])
+        aside.catalog__aside.catalog-aside 
+          h3.catalog-aside__title Оксфорд 1950
+          p.catalog-aside__text Новая коллекция изысканных кресел
+          a(href="/catalog", class="catalog-aside__link dynamic-link", aria-label="Перейти в коллекцию")
+            span(class='catalog-aside__link-text') В каталог
+              span(aria-hidden="true", class="catalog-aside__arrow")
+

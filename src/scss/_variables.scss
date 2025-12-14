@@ -1,0 +1,11 @@
+@mixin containerSidesPadding {
+  padding-left: var(--containerPadding);
+  padding-right: var(--containerPadding);
+}
+
+$mainAsides: (
+  'aside': 0,
+  'aside1': 1,
+  'aside2': 2,
+);
+$header_link_padding: 4px;

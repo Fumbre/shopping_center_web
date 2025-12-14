@@ -1,0 +1,70 @@
+block content
+  if historyLinks
+    include historyLinks.pug
+  block mainContainer
+    include ../partials/webpack-assets.pug
+    section.category-item
+      .category-item__container.container
+        .category-item__main-view.category-item-main-view 
+          picture.category-item-main-view__picture.category-item__picture
+            source(media="(max-width: 600px)", srcset=`/assets/images/${item.category}/${item.name}__big-768.png`)
+            img(src=`/assets/images/${item.category}/${item.name}__main.png`, alt=item.item.fullname, class="category-item__img")
+        .category-item__view.category-item-view
+          mixin viewItem(index)
+            li.category-item-view__item 
+              picture.category-item-view__picture.category-item__picture
+                source(media="(max-width: 600px)", srcset=`/assets/images/${item.category}/${item.name}__${index}-768.png`)
+                img(src=`/assets/images/${item.category}/${item.name}__id${index}.png`, alt=item.item.fullname, class="category-item__img")
+          ul.category-item-view__list.list-flex
+            +viewItem(0)
+            +viewItem(1)
+            +viewItem(2)
+            +viewItem(3)
+        .category-item__info
+          .category-item__rating.rating
+            span.rating__text= `${item.item.rating.toLocaleString('ru-RU')}`
+            svg.rating__svg
+              use(xlink:href=`${svgPath}#star`)
+          h2.category-item__title= item.item.fullname
+          p.category-item__text= item.item.description
+          span.category-item__price= `${(item.item.price - item.item.discount).toLocaleString('ru-RU')} руб`
+          button.category-item__button.btn-full Купить в один клик
+          a(href="#", class="category-item__add-to-cart") + Добавить в корзину
+        if mechanism
+          .category-item__description.category-item-description
+            h3.category-item-description__title= mechanism.title
+            p.category-item-description__text!= mechanism.description
+            picute.category-item__picture
+              source(media="(max-width: 996px)", srcset=`/assets/images/mechanisms/${item.item.mechanism}__768.png`)
+              img(class="category-item__img category-item-description__img", src=`/assets/images/mechanisms/${item.item.mechanism}.png`, alt=`${mechanism.title} фото`)
+        .category-item__additional.category-item-addt
+          mixin additInfo(key, dt)
+            if key
+              dt.category-item-addt__term= dt
+              dd.category-item-addt__desc= key
+          dl.category-item-addt__list
+            +additInfo(item.item.additionalInformation.guarantee, 'Гарантия')
+            +additInfo(item.item.additionalInformation.article, 'Артикул')
+            +additInfo(item.item.additionalInformation.width, 'Длина')
+            +additInfo(item.item.additionalInformation.height, 'Высота')
+            +additInfo(item.item.additionalInformation.depth, 'Глубина')
+            +additInfo(item.item.additionalInformation["sleeping place"], 'Спальное место')
+            +additInfo(item.item.additionalInformation["landing height"], 'Высота посадки')
+            +additInfo(item.item.additionalInformation.mechanism, 'Механизм')
+            +additInfo(item.item.additionalInformation["upholstery type"], 'Тип обивки')
+            +additInfo(item.item.additionalInformation.color, 'Цвет')
+            +additInfo(item.item.additionalInformation.filler, 'Наполнитель')
+            +additInfo(item.item.additionalInformation["frame material"], 'Материал каркаса')
+            +additInfo(item.item.additionalInformation["number of places"], 'Количество мест')
+            +additInfo(item.item.additionalInformation.category, 'Категория')
+            +additInfo(item.item.additionalInformation["return type"], 'Возврат')
+    include ../partials/card.pug
+    if similars.length
+      section.similar-items
+        .similar-items__container.container
+          h2.similar-items__title Похожие товары
+          ul.similar-items__list.list-flex
+            each similar in similars
+              li.similar-items__item
+                +card(similar.category, similar.name, similar.item.fullname, similar.item.price, similar.item.rating, similar.item.specialOffer, similar.item.discount, false).similar-items
+        

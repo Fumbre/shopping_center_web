@@ -1,0 +1,9 @@
+{
+  "watch": [
+    "dist",
+    "app.js",
+    "src"
+  ],
+  "ext": "js,pug,scss,json",
+  "exec": "node app.js"
+}

@@ -1,0 +1,10 @@
+block historyLinks 
+  nav.history 
+    .container
+      ul.history__list.list-flex
+        li.history__item
+          a(href="/", class="history__link dynamic-link") Главная
+        each link in historyLinks 
+          li.history__item
+            span.history__separator /
+            a(href=link[0], class="history__link dynamic-link")= link[1]

@@ -1,0 +1,196 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.category-item {
+  &__container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 16px;
+    @include containerSidesPadding;
+    padding-bottom: 41px;
+  }
+
+  &__title {
+    margin: 0;
+    @include text(24px, normal, 130%);
+    color: $black;
+  }
+
+  &__rating {
+    top: 14px;
+  }
+
+  &__text {
+    margin: 0 0 21px 0;
+    @include text(14px, normal, 100%);
+    color: $grey;
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 21px;
+    @include text(36px, normal, 130%);
+    color: $black;
+  }
+
+  &__button {
+    display: block;
+    margin-bottom: 12px;
+    padding: 19px 35px;
+  }
+
+  &__add-to-cart {
+    display: flex;
+    width: fit-content;
+    text-indent: 30px;
+    color: $primary;
+  }
+
+  &__main-view {
+    position: absolute;
+    width: calc((100% - 32px - (var(--containerPadding) * 2)) / 2);
+  }
+
+  &__view {
+    margin-bottom: 32px;
+    padding-top: 261px;
+    width: 100%;
+    max-width: calc((100% - 32px) / 2);
+  }
+
+  &__info {
+    position: relative;
+    margin-bottom: 32px;
+    padding-top: 37px;
+    width: 100%;
+    max-width: calc((100% - 32px) / 2);
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% - 32px) / 2);
+  }
+
+  &__additional {
+    margin-left: auto;
+    width: calc((100% - 32px) / 2);
+  }
+
+  &__picture {
+    display: flex;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+}
+
+
+.category-item-view {
+  &__list {
+    padding: 10px 25px;
+    justify-content: space-between;
+    background-color: $grey_light;
+  }
+
+  &__picture {
+    max-height: 61px;
+  }
+
+}
+
+.category-item-description {
+  &__title {
+    margin: 0 0 8px 0;
+    @include text(16px, bold, 100%);
+    color: $black;
+  }
+
+  &__text {
+    margin: 0 0 auto 0;
+    @include text(14px, normal, 180%);
+    color: $black;
+
+  }
+}
+
+.category-item-addt {
+
+  &__list {
+    margin: 0;
+  }
+
+  &__term {
+    position: relative;
+    clear: both;
+    float: left;
+    display: flex;
+    margin-right: 6px;
+    width: calc(100% - 259px);
+    white-space: nowrap;
+    color: $grey;
+    @include text(14px, normal, 180%);
+
+    &::after {
+      content: "";
+      flex-grow: 1;
+      align-self: flex-end;
+      height: 1px;
+      background-image:
+        linear-gradient(90deg, transparent 75%, currentColor 75%),
+        linear-gradient(0deg, transparent 75%, currentColor 75%);
+      background-size: 4px 4px;
+      background-position: 0 0, 2px 2px;
+      transform: translateY(-6px);
+    }
+  }
+
+  &__desc {
+    float: right;
+    min-width: 253px;
+    margin: 0;
+    white-space: nowrap;
+    @include text(14px, normal, 180%);
+    color: $black;
+  }
+
+}
+
+.similar-items {
+  &__container {
+    @include containerSidesPadding;
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+
+  &__title {
+    margin: 0 0 24px 0;
+    color: $black;
+    @include text(24, normal, 130%);
+  }
+
+  &__list {
+    overflow: hidden;
+    flex-wrap: nowrap;
+    gap: 32px;
+  }
+
+  &__item {
+    display: flex;
+    min-width: calc((100% - 32px * 3) / 4);
+    // max-width: calc((100% - 32px * 3) / 4);
+    min-height: 420px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}

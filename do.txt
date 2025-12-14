@@ -1,0 +1,7 @@
+- ul.faq__list#faq-header.list-flex (aria-hidden="true") < @media (max-width: 734px) 
+
+button.nav-toggle(
+  aria-expanded="false",
+  aria-controls="nav-menu faq-header",
+  aria-label="Открыть навигацию и FAQ"
+)

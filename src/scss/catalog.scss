@@ -1,0 +1,277 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.catalog {
+
+  &__container {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 70px;
+    @include containerSidesPadding;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0 0 24px 0;
+    @include text(24px, normal, 130%);
+    color: $black;
+  }
+
+  &__wrapper {
+    order: 1;
+    width: calc(((100% - 10px) / 4) * 3);
+  }
+
+  &__filter {
+    width: calc(((100% - (32px * 3)) / 4));
+  }
+
+  &__list {
+    overflow: hidden;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, calc((100% - 32px * 2) / 3));
+    grid-template-rows: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 32px;
+    margin-bottom: 32px;
+    max-height: 1324px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__aside {
+    position: absolute;
+    bottom: 134px;
+  }
+
+  &__btn-list {
+    height: 32px;
+  }
+}
+
+.catalog-item {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px 0;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    min-height: 420px;
+
+    & .card__picture {
+      max-height: 158px;
+    }
+  }
+}
+
+.catalog-aside {
+  padding: 30px;
+  padding-top: 220px;
+  width: calc((100% - 40px - (32px * 3)) / 4);
+  border-radius: 10px;
+  background-color: $black;
+
+  &__title {
+    margin: 0;
+    max-width: 199px;
+    font-family: 'Playfair display';
+    color: $gold;
+    @include text(24px, bold, normal);
+  }
+
+  &__text {
+    margin: 0 0 12px 0;
+    max-width: 199px;
+    @include text(16px, normal, normal);
+    color: $grey;
+  }
+
+  &__link {
+    width: fit-content;
+    @include text(16px, bold, 120%);
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 190px;
+      background-image: url('../assets/images/mini_new-collection__asideBackground.jpg');
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+  }
+
+  &__link-text {
+    position: relative;
+    color: $primary;
+  }
+
+  &__arrow {
+    @include goodArrowInCircle(2px, 2px);
+  }
+
+}
+
+.catalog-filter {
+  &__title {
+    display: inline-flex;
+    margin: 0 0 20px 0;
+    @include text(18px, normal, 130%);
+    color: $black;
+
+    &::after {
+      display: inline-flex;
+      content: 'овать по:';
+    }
+  }
+
+  &__list {
+    flex-direction: column;
+    gap: 26px 0;
+  }
+
+}
+
+.catalog-filter-item {
+  &__title {
+    margin: 0 0 9px 0;
+    @include text(16px, 600, 130%);
+    color: $grey_shade;
+  }
+
+  &__btn {
+    display: none;
+  }
+
+  &__list {
+    flex-direction: column;
+    gap: 10px 0;
+  }
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+
+  &__input:checked+&__checkbox-btn {
+    background-color: $primary;
+    color: $primary;
+  }
+
+  &__input:checked+&__checkbox-btn::before {
+    color: $white;
+  }
+
+  &__checkbox-btn {
+    width: 20px;
+    height: 20px;
+    border: 1px solid currentColor;
+
+    &::before {
+      width: 10px;
+      height: 4px;
+      color: transparent;
+      transform: translate(-50%, -75%) rotate(-45deg);
+    }
+  }
+
+  &__text {
+    padding-left: 32px;
+    @include text(16px, normal, 130%);
+    color: $grey_shade;
+  }
+
+  &__range:nth-child(2) {
+    height: 13px;
+  }
+
+
+}
+
+.catalog-filter-item-range {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &__label {
+    position: absolute;
+    width: 100%;
+    height: 0;
+  }
+
+  &__text {
+    margin-right: 5px;
+  }
+
+  &__input-text {
+    padding: 4px 13px;
+    max-width: 86px;
+    border: solid 1px $grey;
+    color: $grey_shade;
+  }
+
+  &__input {
+    width: 100%;
+    height: 6px;
+    background: #ddd;
+    border-radius: 3px;
+    color: red;
+    outline: none;
+    cursor: pointer;
+    background-color: currentColor;
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: attr(data-value);
+      width: 20px;
+      height: 20px;
+      background-color: inherit;
+    }
+
+    &-from {
+      &::before {
+        left: 0;
+      }
+    }
+
+    &-to {
+      &::before {
+        right: 0;
+      }
+    }
+
+    &:focus {
+      color: darkblue;
+    }
+  }
+
+  // &__arrow {
+  //   position: absolute;
+  //   width: 5px;
+  //   height: 5px;
+  //   background-color: red;
+  // }
+
+  // &__input:focus+&__arrow {
+  //   background-color: blue;
+  // }
+
+}

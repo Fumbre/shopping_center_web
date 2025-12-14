@@ -1,0 +1,114 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+.card {
+  position: relative;
+  padding: 30px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: $grey_light;
+
+  &__discount {
+    position: absolute;
+    top: 30px;
+    left: 0;
+  }
+
+  &__picture {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin: 0 0 23px 0;
+    max-width: 235px;
+    color: $black;
+    @include text(24px, normal, 130%);
+  }
+
+  &__price {
+    margin: 0 0 24px 0;
+    @include text(16px, normal, 130%);
+    color: $grey_shade;
+  }
+
+  &__price-after-discount {
+    margin-right: 30px;
+    @include text(18px, normal, 130%);
+    color: $secondary;
+  }
+
+  &__price-before-discount {
+    text-decoration: line-through;
+    color: $grey;
+  }
+
+  &__link {
+    display: flex;
+    padding: 19px 35px;
+    width: fit-content;
+    max-width: 296px;
+    box-shadow: inset 0 0 0 2px $primary;
+    border-radius: 10px;
+    @include text(16px, 600, 100%);
+    color: $primary;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+}
+
+.card-discount {
+  padding: 7px 15px;
+  width: 100%;
+  max-width: fit-content;
+  text-align: center;
+  background-color: $secondary;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    max-width: 10px;
+    border-top: solid 16px transparent;
+    border-left: solid 10px $secondary;
+    border-bottom: solid 16px transparent;
+    transform: translate(100%, 0)
+  }
+
+  &__text {
+    @include text(14px, bold, normal);
+    color: $white;
+  }
+}
+
+.card-mechanism-support,
+.card-mechanism-accordion {
+  &::before {
+    position: absolute;
+    content: '';
+    right: 30px;
+    bottom: 30px;
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height: 130px;
+    background-image: url('../assets/images/mechanisms/support-card.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+}
+
+.card-mechanism-accordion::before {
+  background-image: url('../assets/images/mechanisms/accordion-card.png');
+}

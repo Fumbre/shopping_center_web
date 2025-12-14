@@ -1,0 +1,29 @@
+@use 'colors' as *;
+
+.history {
+  margin-top: -9px;
+  padding-bottom: 16px;
+
+  &__item:not(:last-child),
+  &__separator {
+    margin-right: 6px;
+  }
+
+  &__item {
+    color: $grey;
+
+    &:last-child {
+      color: $primary_shade;
+    }
+  }
+
+  &__link,
+  &__separator {
+    color: inherit;
+  }
+
+  &__item:last-child &__separator {
+    color: $grey;
+  }
+
+}

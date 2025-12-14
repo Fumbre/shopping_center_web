@@ -1,0 +1,178 @@
+include ../partials/webpack-assets.pug
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title SitDownPlease
+    link(rel="icon", href='/assets/images/favicon.png', type="image/x-icon")
+    link(rel="stylesheet", href=cssPath)
+    script(defer src=jsPath) 
+  body
+    h1.visually-hidden Магазин мебели SitDownPlease
+    header.header#header
+      .header__container.container
+        .header__region.header-region 
+          p.header-region__title Ваш регион:
+          ul.header-region__list.list
+            li.header-region__item
+              a(href="#", class="header-region__link") Москва
+        .header__phone.phone 
+          a(href="tel:+74958854547", class="phone__link") 
+            svg.phone__svg
+              use(xlink:href=`${svgPath}#phone_call`)
+            span.phone__number +7 (495) 885-45-47
+        .header__faq.faq
+          ul.faq__list#faq-header.list-flex
+            li.faq__item
+              a(href="#", class="faq__link header-link") О компании
+            li.faq__item
+              a(href="#", class="faq__link header-link") Гарантия и возврат
+            li.faq__item
+              a(href="#", class="faq__link header-link") Корпоративным клиентам
+            li.faq__item
+              a(href="#", class="faq__link header-link") Дизайн-решение
+        .header__logo 
+          a(href="/", class="dynamic-link").logo
+            svg.logo__svg
+              use(xlink:href=`${svgPath}#elephant`)
+            img(src=("/assets/images/SitDownPls.png"), alt="SitDownPlease", class="logo__img")
+        .header__nav
+          button(class="nav-toggle" aria-expanded="false" aria-controls="nav-menu")
+            span.nav-toggle__stroke
+            span.nav-toggle__stroke
+            span.nav-toggle__stroke
+          nav.nav#nav-menu
+            ul.nav__list.list-flex
+              li.nav__item
+                a(href="/catalog", class="nav__link header-link dynamic-link") Каталог
+              li.nav__item
+                a(href="#", class="nav__link header-link") Магазины
+              li.nav__item
+                a(href="#", class="nav__link header-link") Шоу-рум
+              li.nav__item
+                a(href="#", class="nav__link header-link") Доставка и оплата
+              li.nav__item
+                a(href="#", class="nav__link header-link") Дисконт
+              li.nav__item
+                a(href="/contacts", class="nav__link header-link dynamic-link") Контакты
+        .header__lookfor
+          .header__search.header-search
+            form(action="/search", method="get", class="header-search__form") 
+              label.header-search__label(for="search")
+                input(id="search", type="text", placeholder="Я хочу купить...", class="header-search__input")
+              button(type="submit", aria-label="Найти", class="header-search__submit btn-circle") 
+          .header__filter.header-filter
+            button.header-filter__button(aria-label="Фильтер по категориям")
+              span.header-filter__title(aria-label="Выбрать категорию")
+            ul#searchFilter.header-filter__list.list
+              li.header-filter__item
+                label
+                  input.header-filter__checkbox(type="checkbox")
+                  span.checkbox.header-filter__text Диваны
+              li.header-filter__item
+                label
+                  input.header-filter__checkbox(type="checkbox")
+                  span.checkbox.header-filter__text Кресла
+              li.header-filter__item
+                label
+                  input.header-filter__checkbox(type="checkbox")
+                  span.checkbox.header-filter__text Пуфы
+              li.header-filter__item
+                label
+                  input.header-filter__checkbox(type="checkbox")
+                  span.checkbox.header-filter__text Кровати
+              li.header-filter__item
+                label
+                  input.header-filter__checkbox(type="checkbox")
+                  span.checkbox.header-filter__text Тумбы
+              li.header-filter__item
+                label
+                  input.header-filter__checkbox(type="checkbox")
+                  span.checkbox.header-filter__text Комоды
+              li.header-filter__item
+                label
+                  input.header-filter__checkbox(type="checkbox")
+                  span.checkbox.header-filter__text Стулья
+              li.header-filter__item
+                label
+                  input.header-filter__checkbox(type="checkbox")
+                  span.checkbox.header-filter__text Столы
+              li.header-filter__item
+                label
+                  input.header-filter__checkbox(type="checkbox")
+                  span.checkbox.header-filter__text Аксессуары
+        .header__account.account
+          .account__login.account-login
+            button(type="button", id="login", class="account-login__button", aria-label="Войти в аккаунт") 
+              svg.account-login__svg
+                use(xlink:href=`${svgPath}#user`)
+          .account__cart.account-cart
+            a(class="account-cart__link", href="#")
+              span.account-cart__count 0
+              svg.account-cart__svg
+                use(xlink:href=`${svgPath}#cart`)
+    main#main.main 
+      block content
+        block historyLinks
+        block mainContainer
+    footer#footer.footer 
+      h2.visually-hidden Дополнительная информация о SitDownPls
+      .footer__container.container
+        .footer__logolinks-wrapper
+          a(href="#").footer__logo.logo
+              svg.logo__svg
+                use(xlink:href=`${svgPath}#elephant`)
+              img(src=("/assets/images/SitDownPls.png"), alt="SitDownPlease", class="logo__img")
+          ul.footer__list-link.list-flex 
+            li.footer__item-link
+              a(href="#", class="footer__svg-link", aria-label="Мы в facebook")
+                svg.footer__svg
+                  use(xlink:href=`${svgPath}#fb`)
+            li.footer__item-link
+              a(href="#", class="footer__svg-link", aria-label="Мы во вконтакте")
+                svg.footer__svg
+                  use(xlink:href=`${svgPath}#vk`)
+            li.footer__item-link
+              a(href="#", class="footer__svg-link", aria-label="Мы в инстаграмм")
+                svg.footer__svg
+                  use(xlink:href=`${svgPath}#inst`)
+        .footer__list-wrapper
+          ul.footer__lists.list-flex
+            li.footer__items 
+              span.footer__title-items О нас
+              ul.footer__list.list-flex
+                li.footer__item
+                  a(href="#", class="footer__link") О компании
+                li.footer__item
+                  a(href="#", class="footer__link") Блог
+            li.footer__items 
+              span.footer__title-items Услуги
+              ul.footer__list.list-flex
+                li.footer__item
+                  a(href="#", class="footer__link") Доставка
+                li.footer__item
+                  a(href="#", class="footer__link") Рассрочка и кредит
+                li.footer__item
+                  a(href="#", class="footer__link") Сборка и установка
+            li.footer__items 
+              span.footer__title-items Связь с нами
+              ul.footer__list.list-flex
+                li.footer__item
+                  a(href="#", class="footer__link") Обратная связь
+                li.footer__item
+                  a(href="#", class="footer__link") Контакты
+            li.footer__items 
+              span.footer__title-items Сотрудничество
+              ul.footer__list.list-flex
+                li.footer__item
+                  a(href="/cooperation", class="footer__link dynamic-link") Поставщикам
+                li.footer__item
+                  a(href="#", class="footer__link") Оптовикам
+                li.footer__item
+                  a(href="#", class="footer__link") Карьера
+      .footer__copyright-wrapper
+        span.footer__copyright
+          | SDP
+          sup(class="reg") &reg;
+          | 2011-2025

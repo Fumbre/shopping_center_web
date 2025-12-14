@@ -1,0 +1,141 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.cooperation {
+  padding-top: 16px;
+  @include containerSidesPadding;
+  padding-bottom: 70px;
+
+  &__title {
+    margin: 0 0 16px 0;
+    @include text(32px, normal, 100%);
+    color: $black;
+  }
+
+  &__title-h3 {
+    margin: 0 0 12px 0;
+    @include text(24px, normal, normal);
+    color: $black;
+  }
+
+  &__section {
+    padding: 16px 0;
+  }
+
+  &__text {
+    margin: 0;
+    max-width: 842px;
+    @include text(16px, normal, 180%);
+    color: $grey_shade;
+  }
+
+}
+
+.cooperation-youget {
+  &__list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 37px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:nth-child(1)::before {
+      background-image: url(../assets/images/cooperation/network.png);
+    }
+
+    &:nth-child(2)::before {
+      background-image: url(../assets/images/cooperation/briefcase.png);
+    }
+
+    &:nth-child(3)::before {
+      background-image: url(../assets/images/cooperation/git-pull-request.png);
+    }
+  }
+
+  &__text {
+    max-width: 587px;
+    line-height: 150%;
+  }
+}
+
+.cooperation-why {
+  &__list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__item {
+    position: relative;
+    counter-increment: custom-counter;
+
+    &::before {
+      content: "Возможность " counter(custom-counter) ": ";
+      display: block;
+      margin-bottom: 12px;
+      @include text(16px, bold, normal);
+      color: $secondary;
+    }
+  }
+}
+
+.cooperation-guarantees {
+  &__list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 27px;
+    counter-increment: custom-counter;
+
+    &::before {
+      position: absolute;
+      content: counter(custom-counter) ". ";
+      top: 0;
+      left: 0;
+      @include text(16px, bold, 180%);
+      color: $secondary;
+    }
+  }
+}
+
+.cooperation-guarant {
+  position: relative;
+  padding-top: 38px;
+  padding-left: 109px;
+  padding-bottom: 22px;
+
+  &__title {
+    margin: 0;
+    max-width: 515px;
+    @include text(24px, normal, 150%);
+    color: $black;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 16px;
+    left: 0;
+    width: 77px;
+    height: 116px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../assets/images/cooperation/pencil.png);
+  }
+}

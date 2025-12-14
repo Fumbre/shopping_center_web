@@ -1,0 +1,11 @@
+block content
+  if historyLinks
+    include historyLinks.pug
+  block mainContainer
+    section.contacts
+      .contacts__container.container
+        h2.contacts__title Контакты
+        form.contacts__from
+           input(type="text", class="contacts__input", placeholder="Поиск магазина")
+           button(class="contacts__btn btf-full", aria-label="Найти магазин") Поиск
+        .contacts__map 

@@ -1,0 +1,11 @@
+@use 'colors' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.contacts {
+  &__title {
+    margin: 0 0 16px 0;
+    @include text(32px, normal, 100%);
+    color: $black;
+  }
+}

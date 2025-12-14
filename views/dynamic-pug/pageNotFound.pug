@@ -1,0 +1,18 @@
+block content
+  block historyLinks 
+    nav.history 
+      .container
+        ul.history__list.list-flex
+          li.history__item
+            a(href="/", class="history__link dynamic-link") Главная
+          li.history__item
+            <span class="history__separator">/</span>
+             a(class="history__link dynamic-link") :(
+  block mainContainer
+    include ../partials/webpack-assets.pug
+    section.notFound
+      .notFound__container.container
+        svg.notFound__svg
+          use(xlink:href=`${svgPath}#elephant`)
+        h2.notFound__title По вашему запросу 
+        p.notFound__text ничего не нашлось 

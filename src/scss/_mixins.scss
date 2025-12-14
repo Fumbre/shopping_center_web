@@ -1,0 +1,67 @@
+@mixin arrow($size, $bold, $color, $rotate) {
+  position: absolute;
+  content: "";
+  width: $size;
+  height: $size;
+  border: $bold solid $color;
+  border-left: transparent;
+  border-bottom: transparent;
+  transform: rotate($rotate);
+}
+
+@mixin text($size, $weight, $lh) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+}
+
+@mixin btnCircleArrow($width, $topArrow, $bottomArrow, $color) {
+  &::before {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    content: "";
+    width: $width;
+    border: 1px solid $color;
+    border-radius: 5px;
+    transform: translate(calc(-50% + 1px), calc(-50% - $topArrow)) rotate(45deg);
+  }
+
+  &::after {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    content: "";
+    width: $width;
+    border: 1px solid $color;
+    border-radius: 5px;
+    transform: translate(calc(-50% + 1px), calc(-50% + $bottomArrow)) rotate(-45deg);
+
+  }
+}
+
+@mixin goodArrowInCircle($arrowBold, $borderBold) {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: inherit;
+
+  &::before {
+    top: 50%;
+    right: 0;
+    @include arrow(5px, $arrowBold, currentColor, 45deg);
+    transform: translate(20px, -50%) rotate(45deg);
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    content: '';
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: solid $borderBold currentColor;
+    transform: translate(30px, -50%);
+  }
+}

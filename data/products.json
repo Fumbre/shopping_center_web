@@ -1,0 +1,694 @@
+[
+  {
+    "name": "Z-44",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван тканевый “Z-44”",
+      "description": "Очень удобный диван",
+      "price": 32990,
+      "discount": 10000,
+      "rating": 4.5,
+      "specialOffer": true,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Белый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Металл. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "Z-85",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван вел-флок “Z-85”",
+      "description": "Очень удобный диван",
+      "price": 32990,
+      "discount": 10000,
+      "rating": 4.2,
+      "specialOffer": true,
+      "mechanism": "accordion",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA31269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Аккордеон",
+        "upholstery type": "Рогожка",
+        "color": "Коричневый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Металл. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "R-94",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван кожаный “R-94”",
+      "description": "Очень удобный диван",
+      "price": 94990,
+      "discount": null,
+      "rating": 5.0,
+      "specialOffer": false,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Черный",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Кожаный. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "T-75",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван апартековый “T-75”",
+      "description": "Очень удобный диван",
+      "price": 69990,
+      "discount": null,
+      "rating": 4.9,
+      "specialOffer": false,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Коричневый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "D-31",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван тканевый “D-31”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 28490,
+      "discount": null,
+      "rating": 4.8,
+      "specialOffer": false,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Синий",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "Y-68",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван велюровый “Y-68”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 22990,
+      "discount": null,
+      "rating": 4.8,
+      "specialOffer": false,
+      "mechanism": "book",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Книжка",
+        "upholstery type": "Рогожка",
+        "color": "Оранжевый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "W-95",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван из шинила “W-95”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 22990,
+      "discount": null,
+      "rating": 4.8,
+      "specialOffer": false,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Желтый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "G-41",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван флоковый “G-41”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 17990,
+      "discount": null,
+      "rating": 4.8,
+      "specialOffer": false,
+      "mechanism": "accordion",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Аккордеон",
+        "upholstery type": "Рогожка",
+        "color": "Бежевый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "V-43",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван шиниловый “V-43”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 19990,
+      "discount": null,
+      "rating": 4.8,
+      "specialOffer": false,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Серый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "S-99",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван велюровый “S-99”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 19990,
+      "discount": null,
+      "rating": 4.7,
+      "specialOffer": false,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Бежевый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Одноместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "F-85",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван из кожзама “F-85”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 26990,
+      "discount": null,
+      "rating": 4.7,
+      "specialOffer": false,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Зеленый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "H-64",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван флоковый “H-64”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 25990,
+      "discount": null,
+      "rating": 4.6,
+      "specialOffer": false,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Серый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "H-58",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван флоковый “H-58”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 23990,
+      "discount": null,
+      "rating": 4.6,
+      "specialOffer": false,
+      "mechanism": "book",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Книжка",
+        "upholstery type": "Рогожка",
+        "color": "Синий",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Одноместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "R-43",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван из кожзама “R-43”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 33990,
+      "discount": null,
+      "rating": 4.6,
+      "specialOffer": false,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Коричневый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "C-42",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван из шинила “C-42”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 18990,
+      "discount": null,
+      "rating": 4.6,
+      "specialOffer": false,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Серый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "U-58",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван велюровый “U-58”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 21990,
+      "discount": null,
+      "rating": 4.6,
+      "specialOffer": false,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Желтый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "F-41",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван флоковый “F-41”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 17990,
+      "discount": null,
+      "rating": 4.5,
+      "specialOffer": false,
+      "mechanism": "book",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Книжка",
+        "upholstery type": "Рогожка",
+        "color": "Серый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "R-85",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван велюровый “R-85”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 34990,
+      "discount": null,
+      "rating": 4.5,
+      "specialOffer": false,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Зеленый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "S-44",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван велюровый “S-44”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 19990,
+      "discount": null,
+      "rating": 4.5,
+      "specialOffer": false,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Синий",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Двухместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "C-80",
+    "category": "sofas",
+    "item": {
+      "fullname": "Диван из шинила “С-80”",
+      "description": "Мини 120 см без ящика Stark синий (Рогожка)",
+      "price": 20990,
+      "discount": null,
+      "rating": 4.4,
+      "specialOffer": false,
+      "mechanism": "support",
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269014",
+        "width": "163 см",
+        "height": "90 см",
+        "depth": "108 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "mechanism": "Опорный",
+        "upholstery type": "Рогожка",
+        "color": "Желтый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Апартековый. рама с дерев. латами",
+        "number of places": "Одноместные",
+        "category": "Диваны",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "X-24",
+    "category": "armchairs",
+    "item": {
+      "fullname": "Кресло велюровое “X-24”",
+      "description": "Очень удобное кресло :)",
+      "price": 24990,
+      "discount": 9000,
+      "rating": 4.6,
+      "specialOffer": true,
+      "additionalInformation": {
+        "guarantee": "18 месяцев",
+        "article": "AAA41269012",
+        "width": "163 см",
+        "height": "90 см",
+        "sleeping place": "200 см х 125 см",
+        "landing height": "45 см",
+        "upholstery type": "Рогожка",
+        "color": "Желтый",
+        "filler": "Независимый пружинный блок",
+        "frame material": "Металл. рама с дерев. латами",
+        "category": "Кресла",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "Quartz-23",
+    "category": "accessories",
+    "item": {
+      "fullname": "Будильник  “Quartz-23”",
+      "description": "Будильник на целый день",
+      "price": 1890,
+      "discount": 600,
+      "rating": 4.4,
+      "specialOffer": true,
+      "additionalInformation": {
+        "guarantee": "1 месяц",
+        "article": "AAA41219012",
+        "width": "50 см",
+        "height": "40 см",
+        "color": "Коричневый",
+        "frame material": "Металл. рама с дерев. латами",
+        "category": "Аксессуары",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "Oh my deer",
+    "category": "accessories",
+    "item": {
+      "fullname": "Мини-скульптура “Oh my deer”",
+      "description": "Лучший подарок парню на день рождение",
+      "price": 990,
+      "discount": 300,
+      "rating": 4.3,
+      "specialOffer": true,
+      "additionalInformation": {
+        "guarantee": "7 дней",
+        "article": "AAA41219012",
+        "width": "80 см",
+        "height": "90 см",
+        "color": "Черный",
+        "frame material": "Металл. рама с дерев. латами",
+        "category": "Аксессуары",
+        "return type": "Условия"
+      }
+    }
+  },
+  {
+    "name": "H-18",
+    "category": "accessories",
+    "item": {
+      "fullname": "Термометр + гидрометр “H-18”",
+      "description": "Лучший подарок деду",
+      "price": 2090,
+      "discount": 700,
+      "rating": 4.1,
+      "specialOffer": true,
+      "additionalInformation": {
+        "guarantee": "7 дней",
+        "article": "AAA91219012",
+        "width": "60 см",
+        "height": "60 см",
+        "color": "Коричневый",
+        "frame material": "Металл. рама с дерев. латами",
+        "category": "Аксессуары",
+        "return type": "Условия"
+      }
+    }
+  }
+]
