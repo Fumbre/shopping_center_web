@@ -1,6 +1,6 @@
 # project from gitLab 
 
-Start 2024; Paused 2024 December; end ??
+Start Dec 12, 2024; Paused Feb 19, 2025; 
 
 ## Project with SSR and SPA server based on PUG
 
